@@ -46,10 +46,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
             //!coin 
-            case 'coin ':
-            var coinflip = Math.random();
+            case 'coin':
+            var coin = Math.random();
             
-            if(coinflip <= 0.5){
+            if(coin <= 0.5){
                 bot.sendMessage({
                     to: channelID,
                     message: 'Heads'
