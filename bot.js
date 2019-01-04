@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('I am ready!');
 });
 
-bot.on('message', function (user, userID, channelID, message, evt) {
+client.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
     if (message.substring(0, 1) == '!') {
@@ -20,12 +20,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             var coinflip = Math.random();
             
             if(coinflip <= 0.5){
-                bot.sendMessage({
+                client.sendMessage({
                     to: channelID,
                     message: 'Heads'
                 });
             }
-            else{bot.sendMessage({
+            else{client.sendMessage({
                     to: channelID,
                     message: 'Tails'
                 });
@@ -35,12 +35,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
             var coinflip = Math.random();
             
             if(coinflip <= 0.5){
-                bot.sendMessage({
+                client.sendMessage({
                     to: channelID,
                     message: 'Heads'
                 });
             }
-            else{bot.sendMessage({
+            else{client.sendMessage({
                     to: channelID,
                     message: 'Tails'
                 });
@@ -51,4 +51,4 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 });
 // THIS  MUST  BE  THIS  WAY
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
