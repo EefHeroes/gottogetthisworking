@@ -28,10 +28,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         var cmd = args[0];
        
         args = args.splice(1);
-        switch(cmd) {
-            
-            //!coinflip
-            case 'coinflip':
+        if(args =='coinflip'){
             var coinflip = Math.random();
             
             if(coinflip <= 0.5){
@@ -45,8 +42,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Tails'
                 });
             }
+        }
             //!coin 
-            case "coin":
+            if (args =="coin"){
             var coin = Math.random();
             
             if(coin <= 0.5){
