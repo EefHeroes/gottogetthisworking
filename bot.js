@@ -30,7 +30,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         args = args.splice(1);
         switch(cmd) {
             
-            //!cointflip
+            //!coinflip
             case 'coinflip':
             var coinflip = Math.random();
             
@@ -46,7 +46,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
             //!coin 
-            case 'coin':
+            case 'coin ':
             var coinflip = Math.random();
             
             if(coinflip <= 0.5){
