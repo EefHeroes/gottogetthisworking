@@ -46,7 +46,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 });
             }
             //!coin 
-            case 'coin':
+            case "coin":
             var coin = Math.random();
             
             if(coin <= 0.5){
