@@ -36,11 +36,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Heads'
                 });
+                bot.uploadFile({ 
+                to: channelID, 
+                file: "./images/heads.png" });
             }
             else{bot.sendMessage({
                     to: channelID,
                     message: 'Tails'
                 });
+                 bot.uploadFile({ 
+                to: channelID, 
+                file: "./images/tails.png" });
             }
         }
             //!coin 
@@ -52,11 +58,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Heads'
                 });
+                bot.uploadFile({ 
+                to: channelID, 
+                file: "./images/heads.png" });
             }
             else{bot.sendMessage({
                     to: channelID,
                     message: 'Tails'
                 });
+                 bot.uploadFile({ 
+                to: channelID, 
+                file: "./images/tails.png" });
             }
             
          }
